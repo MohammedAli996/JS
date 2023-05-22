@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tekst = "Hij lijkt een beetje op Nelson Mandela.";
+        var lengte = tekst.length;
+        var spaties = 0;
+        var aCount = 0;
+        var eCount = 0;
+        var iCount = 0;
+        var oCount = 0;
+        var uCount = 0;
+        var woorden = tekst.split(" ").length;
+
+        for (var x = 0; x < lengte; x++) {
+  var teken = tekst.charAt(x);
+        
+        switch (teken) {
+    case " ":
+      spaties++;
+      break;
+    case "a":
+    case "A":
+      aCount++;
+      break;
+    case "e":
+    case "E":
+      eCount++;
+      break;
+    case "i":
+    case "I":
+      iCount++;
+      break;
+    case "o":
+    case "O":
+      oCount++;
+      break;
+    case "u":
+    case "U":
+      uCount++;
+      break;
+    default:
+      break;
+    }
+    }
+        document.write("<br>Hij lijkt een beetje op Nelson Mandela. "+spaties+" spaties<br>");
+        document.write("<br>Aantal a's: "+aCount+"<br>");
+        document.write("<br>Aantal e's: "+eCount+"<br>");
+        document.write("<br>Aantal i's: "+iCount+"<br>");
+        document.write("<br>Aantal o's: "+oCount+"<br>");
+        document.write("<br>Aantal u's: "+uCount+"<br>");
+        document.write("<br>Aantal woorden: "+woorden+"<br>");
+
+</script>
+</body>
+</html>
